@@ -6,7 +6,7 @@ import { formatDistanceToNow } from 'date-fns';
 import { localeWithSuffix } from '../../../scripts/dfnshelper';
 import '../../../elements/emby-button/emby-button';
 import '../../../elements/emby-itemscontainer/emby-itemscontainer';
-import '../../../components/cardbuilder/card.css';
+import '../../../components/cardbuilder/card.scss';
 import Dashboard from '../../../scripts/clientUtils';
 import confirm from '../../../components/confirm/confirm';
 
@@ -96,7 +96,7 @@ import confirm from '../../../components/confirm/confirm';
             deviceHtml += '<div class="cardBox visualCardBox">';
             deviceHtml += '<div class="cardScalable">';
             deviceHtml += '<div class="cardPadder cardPadder-backdrop"></div>';
-            deviceHtml += '<a is="emby-linkbutton" href="' + (canEdit ? '#!/device.html?id=' + device.Id : '#') + '" class="cardContent cardImageContainer">';
+            deviceHtml += `<a is="emby-linkbutton" href="${canEdit ? '#!/device.html?id=' + device.Id : '#'}" class="cardContent cardImageContainer">`;
             const iconUrl = imageHelper.getDeviceIcon(device);
 
             if (iconUrl) {
